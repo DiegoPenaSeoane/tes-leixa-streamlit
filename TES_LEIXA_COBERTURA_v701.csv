@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.1",
+  "updated_at": "2026-05-12T20:27:47.393804+00:00",
+  "users": {
+    "diego": {
+      "display_name": "Diego",
+      "salt": "688d78caa900670a",
+      "password_hash": "cc6316cfa1d60b68dce4f39090e8fcda21e5358e43e6ff308c28a7f2c1359930",
+      "role": "administrador",
+      "active": true,
+      "must_change_password": false,
+      "created_at": "2026-05-12T20:27:47.394262+00:00",
+      "updated_at": "2026-05-12T20:27:47.394283+00:00"
+    },
+    "anton": {
+      "display_name": "Anton",
+      "salt": "d836e8702c38b729",
+      "password_hash": "abb39b87bb3ee867e70a1b38d0a6f0e3c5ca721b39bbaac7efdeeab8721c8f57",
+      "role": "usuario",
+      "active": true,
+      "must_change_password": true,
+      "created_at": "2026-05-12T20:27:47.394425+00:00",
+      "updated_at": "2026-05-12T20:27:47.394439+00:00"
+    },
+    "melisa": {
+      "display_name": "Melisa",
+      "salt": "bb986d06a8d21b39",
+      "password_hash": "d821eaa8fe25d91fab53b0e12024e31bcf0240acc237e7c8c24473c28af1c324",
+      "role": "usuario",
+      "active": true,
+      "must_change_password": true,
+      "created_at": "2026-05-12T20:27:47.394511+00:00",
+      "updated_at": "2026-05-12T20:27:47.394521+00:00"
+    },
+    "elvira": {
+      "display_name": "Elvira",
+      "salt": "5a79b3209462db9c",
+      "password_hash": "fd852bdabfca8bee043892affc36a38d1258f89923a1e7170010a324309388f1",
+      "role": "usuario",
+      "active": true,
+      "must_change_password": true,
+      "created_at": "2026-05-12T20:27:47.394590+00:00",
+      "updated_at": "2026-05-12T20:27:47.394596+00:00"
+    },
+    "lucia": {
+      "display_name": "Lucia",
+      "salt": "1dac924bec2dd617",
+      "password_hash": "dd06d672dba37a4265481bb720cb5d32f29b86134ad6af6efdfe7c912609354c",
+      "role": "usuario",
+      "active": true,
+      "must_change_password": true,
+      "created_at": "2026-05-12T20:27:47.394672+00:00",
+      "updated_at": "2026-05-12T20:27:47.394682+00:00"
+    }
+  },
+  "progress": {
+    "diego": {
+      "answered": [],
+      "wrong_ids": [],
+      "correct_ids": [],
+      "settings": {
+        "daily_goal": 142,
+        "target_pct": 90,
+        "study_days_first_round": 12,
+        "study_days_second_round": 12,
+        "exam_plan_start": "2026-05-12"
+      }
+    },
+    "anton": {
+      "answered": [],
+      "wrong_ids": [],
+      "correct_ids": [],
+      "settings": {
+        "daily_goal": 142,
+        "target_pct": 90,
+        "study_days_first_round": 12,
+        "study_days_second_round": 12,
+        "exam_plan_start": "2026-05-12"
+      }
+    },
+    "melisa": {
+      "answered": [],
+      "wrong_ids": [],
+      "correct_ids": [],
+      "settings": {
+        "daily_goal": 142,
+        "target_pct": 90,
+        "study_days_first_round": 12,
+        "study_days_second_round": 12,
+        "exam_plan_start": "2026-05-12"
+      }
+    },
+    "elvira": {
+      "answered": [],
+      "wrong_ids": [],
+      "correct_ids": [],
+      "settings": {
+        "daily_goal": 142,
+        "target_pct": 90,
+        "study_days_first_round": 12,
+        "study_days_second_round": 12,
+        "exam_plan_start": "2026-05-12"
+      }
+    },
+    "lucia": {
+      "answered": [],
+      "wrong_ids": [],
+      "correct_ids": [],
+      "settings": {
+        "daily_goal": 142,
+        "target_pct": 90,
+        "study_days_first_round": 12,
+        "study_days_second_round": 12,
+        "exam_plan_start": "2026-05-12"
+      }
+    }
+  }
+}
