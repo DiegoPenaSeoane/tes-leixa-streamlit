@@ -1,96 +1,51 @@
-# TES Leixa v7.08 — REINSTALACIÓN COMPLETA LIMPIA
+# TES Leixa v7.05 — Paquete completo 3407
 
-Este paquete es para empezar limpio en el repositorio correcto:
+## Problema que corrige
 
-`DiegoPenaSeoane/tes-leixa-streamlit`
+Si la app muestra 3049 preguntas, significa que no se subió el banco nuevo de `data/`.
 
-## Incluye TODO
+Este paquete incluye TODO lo necesario para que cargue el banco final:
 
-- `app.py`
-- `requirements.txt` correcto
-- `data/tes_leixa_banco_v653_streamlit_ready.csv.gz`
-- `data/user_store.json`
-- `docs/`
-- `scripts/`
-- este README
+- `app.py` con lógica v7.04: aciertos sin repaso largo, fallos con aprendizaje completo.
+- `requirements.txt` mínimo.
+- `data/tes_leixa_banco_v653_streamlit_ready.csv.gz` con 3407 preguntas.
 
-## Validación del banco
+## Validación
 
 - Preguntas: 3407
 - Respuestas inválidas: 0
 - IDs duplicados: 0
 
-## Usuarios incluidos
+## Subir a GitHub
 
-- diego / tes2026 → administrador
-- anton / 1234 → usuario
-- melisa / 1111 → usuario
-- elvira / 2222 → usuario
-- lucia / 3333 → usuario
+Sube:
 
-## Qué hace la app
+- app.py
+- requirements.txt
+- data/
+- docs/
+- scripts/
+- README_UPDATE_v705_FULL_3407.md
 
-- Banco completo de 3407 preguntas.
-- Plan de estudio 12 + 12 días.
-- Aciertos sin repaso largo.
-- Fallos con aprendizaje completo.
-- Solo mis fallos.
-- Solo no respondidas.
-- Dificultad alta/filtro_10.
-- Tablas, reglas, mnemotecnias y explicación profunda en fallos.
-- Persistencia por usuario mediante `data/user_store.json`.
+## Importante sobre usuarios/progreso
 
-## FORMA SIMPLE DE SUBIR
+Este paquete NO incluye `data/user_store.json`.
 
-En GitHub, dentro del repositorio `tes-leixa-streamlit`:
+Eso es intencionado para no borrar usuarios ni progreso.
 
-1. Borra o reemplaza los archivos antiguos si hace falta.
-2. Sube TODO el contenido de este ZIP a la raíz del repo.
-3. Asegúrate de que quede así:
-
-```text
-tes-leixa-streamlit/
-  app.py
-  requirements.txt
-  data/
-    tes_leixa_banco_v653_streamlit_ready.csv.gz
-    user_store.json
-  docs/
-  scripts/
-  README_REINSTALACION_COMPLETA_v708.md
-```
-
-## requirements.txt correcto
-
-El archivo `requirements.txt` debe contener SOLO:
-
-```txt
-pandas==2.2.2
-numpy==1.26.4
-openpyxl==3.1.5
-rich==13.9.4
-markdown-it-py==3.0.0
-mdurl==0.1.2
-pygments==2.19.2
-```
-
-## Streamlit Secrets
-
-En Streamlit → Manage app → Settings → Secrets:
+Pero para que el progreso persista de verdad en Streamlit Cloud necesitas configurar Secrets:
 
 ```toml
-GITHUB_TOKEN = "TU_TOKEN_NUEVO"
-GITHUB_REPO = "DiegoPenaSeoane/tes-leixa-streamlit"
+GITHUB_TOKEN = "TU_TOKEN"
+GITHUB_REPO = "diegopenaseoane/tes-leixa-streamlit"
 GITHUB_BRANCH = "main"
 GITHUB_STORE_PATH = "data/user_store.json"
 ```
 
-## Después de subir
+Si no lo configuras, la app puede funcionar, pero las sesiones se guardan solo de forma temporal.
 
-1. Commit changes.
-2. Streamlit → Reboot app.
-3. Ctrl + F5.
+## Después
 
-Debe aparecer:
-
-`Banco v7.08 · reinstalación completa limpia.`
+- Commit changes
+- Streamlit → Reboot app
+- Ctrl + F5

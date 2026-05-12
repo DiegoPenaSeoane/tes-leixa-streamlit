@@ -1,14 +1,6 @@
-# Configurar persistencia real
+# v7.05 — Banco completo 3407
 
-Para conservar progreso de cada usuario tras reinicios de Streamlit, añade Secrets:
-
-```toml
-GITHUB_TOKEN = "TU_TOKEN"
-GITHUB_REPO = "diegopenaseoane/tes-leixa-streamlit"
-GITHUB_BRANCH = "main"
-GITHUB_STORE_PATH = "data/user_store.json"
-```
-
-El token debe tener permiso de lectura/escritura en Contents del repositorio.
-
-Si la app muestra “GitHub persistente”, el progreso se guarda en el repositorio.
+- Reintegra el banco completo v701 de 3407 preguntas.
+- Mantiene app v7.04: aciertos sin repaso largo y fallos con aprendizaje profundo.
+- Mantiene requirements mínimo.
+- No incluye `data/user_store.json` para no sobrescribir progreso.

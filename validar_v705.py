@@ -1,6 +1,7 @@
-import pandas as pd
-df = pd.read_csv("data/tes_leixa_banco_v653_streamlit_ready.csv.gz", dtype=str, encoding="utf-8-sig", compression="gzip").fillna("")
-print("Preguntas:", len(df))
-print("Respuestas inválidas:", int((~df["respuesta_correcta"].str.upper().isin(["A","B","C","D"])).sum()))
-print("Duplicados ID:", int(df["id"].duplicated().sum()))
-print("Módulos:", df["modulo"].nunique())
+# v7.08 — Reinstalación completa limpia
+
+- Banco completo: 3407 preguntas.
+- Incluye `data/user_store.json` con 5 usuarios iniciales.
+- Incluye `requirements.txt` limpio.
+- Incluye app marcada como v7.08.
+- Validación: respuestas inválidas 0, IDs duplicados 0.

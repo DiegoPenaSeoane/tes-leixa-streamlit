@@ -1,14 +1,30 @@
-# TES Leixa v7.05 — Paquete completo 3407
+# TES Leixa v7.07 — PAQUETE COMPLETO PARA EL REPO CORRECTO
 
-## Problema que corrige
+## REPOSITORIO CORRECTO
 
-Si la app muestra 3049 preguntas, significa que no se subió el banco nuevo de `data/`.
+Subir estos archivos SOLO a:
 
-Este paquete incluye TODO lo necesario para que cargue el banco final:
+`DiegoPenaSeoane/tes-leixa-streamlit`
 
-- `app.py` con lógica v7.04: aciertos sin repaso largo, fallos con aprendizaje completo.
-- `requirements.txt` mínimo.
-- `data/tes_leixa_banco_v653_streamlit_ready.csv.gz` con 3407 preguntas.
+NO subirlos a:
+
+`drive-backend`
+
+## Qué incluye
+
+- Banco completo: 3407 preguntas.
+- App final con:
+  - plan 12+12
+  - usuarios persistentes
+  - modo Plan de hoy
+  - Solo no respondidas
+  - Solo mis fallos
+  - Dificultad alta/filtro_10
+  - aciertos sin repaso largo
+  - fallos con aprendizaje completo
+  - tablas, reglas, mnemotecnias y explicación profunda en fallos
+- Requirements corregido para Streamlit Cloud.
+- Docs y scripts de validación.
 
 ## Validación
 
@@ -16,36 +32,49 @@ Este paquete incluye TODO lo necesario para que cargue el banco final:
 - Respuestas inválidas: 0
 - IDs duplicados: 0
 
-## Subir a GitHub
+## Archivos a subir a GitHub
 
-Sube:
+Sube todo esto al repositorio `tes-leixa-streamlit`:
 
 - app.py
 - requirements.txt
 - data/
 - docs/
 - scripts/
-- README_UPDATE_v705_FULL_3407.md
+- README_UPDATE_v707_TODO_REPO_CORRECTO.md
 
 ## Importante sobre usuarios/progreso
 
-Este paquete NO incluye `data/user_store.json`.
+Este paquete NO incluye:
 
-Eso es intencionado para no borrar usuarios ni progreso.
+`data/user_store.json`
 
-Pero para que el progreso persista de verdad en Streamlit Cloud necesitas configurar Secrets:
+Eso es intencionado para no borrar usuarios, contraseñas ni progreso.
+
+La persistencia real se activa con Streamlit Secrets:
 
 ```toml
-GITHUB_TOKEN = "TU_TOKEN"
-GITHUB_REPO = "diegopenaseoane/tes-leixa-streamlit"
+GITHUB_TOKEN = "TU_TOKEN_NUEVO"
+GITHUB_REPO = "DiegoPenaSeoane/tes-leixa-streamlit"
 GITHUB_BRANCH = "main"
 GITHUB_STORE_PATH = "data/user_store.json"
 ```
 
-Si no lo configuras, la app puede funcionar, pero las sesiones se guardan solo de forma temporal.
+## Cómo comprobar que subiste al repo correcto
 
-## Después
+En GitHub la URL debe empezar por:
 
-- Commit changes
-- Streamlit → Reboot app
-- Ctrl + F5
+`https://github.com/DiegoPenaSeoane/tes-leixa-streamlit/`
+
+NO por:
+
+`https://github.com/DiegoPenaSeoane/drive-backend/`
+
+## Después de subir
+
+1. Commit changes.
+2. Streamlit → Reboot app.
+3. Ctrl + F5.
+4. En la app debe aparecer:
+
+`Banco v7.07 · paquete completo repo correcto.`
