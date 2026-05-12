@@ -444,6 +444,55 @@ def render_forced_tables(q):
         st.divider()
 
 
+
+def fallback_learning_for_failure(q, selected, correct):
+    """Aprendizaje garantizado si el CSV viene pobre o faltan campos."""
+    selected_text = option_text(q, selected)
+    correct_text = option_text(q, correct)
+    tema = normalize_text(q.get("tema", ""))
+    subtema = normalize_text(q.get("subtema", ""))
+    conceptos = normalize_text(q.get("conceptos_clave", ""))
+
+    st.markdown("### Aprendizaje mínimo garantizado del fallo")
+    st.markdown(f"**Respuesta correcta:** {correct}. {correct_text}")
+
+    if selected_text:
+        st.markdown(
+            f"**Por qué no era {selected}:** marcaste **{selected_text}**, "
+            f"pero en este caso el dato que decide la respuesta apunta a **{correct_text}**."
+        )
+
+    if tema or subtema:
+        st.markdown(f"**Qué debes estudiar aquí:** {tema} · {subtema}")
+
+    if conceptos:
+        st.markdown(f"**Conceptos clave:** {conceptos}")
+
+    st.markdown(
+        "**Regla de estudio:** no memorices solo la letra correcta; aprende qué dato del enunciado "
+        "activa esa respuesta y en qué situación las otras opciones sí podrían ser válidas."
+    )
+
+    st.markdown(
+        "**Error típico:** elegir una opción que pertenece al mismo tema, pero no al contexto exacto "
+        "del caso planteado."
+    )
+
+    st.markdown(
+        "**Mini-lección:** vuelve a leer el enunciado buscando tres cosas: situación, prioridad y criterio técnico. "
+        "La opción correcta debe encajar con las tres."
+    )
+
+
+def render_failure_learning(q, selected, correct):
+    """Siempre muestra aprendizaje completo en fallos."""
+    show_learning(q, selected, correct)
+
+    # Refuerzo adicional siempre visible para evitar fallos sin explicación útil.
+    st.divider()
+    fallback_learning_for_failure(q, selected, correct)
+
+
 def show_learning(q, selected, correct):
     render_forced_tables(q)
     regla = normalize_text(q.get("regla_oro", ""))
@@ -545,7 +594,7 @@ def build_plan(df_all, progress):
 
 def render_login(store):
     st.title("🚑 TES Leixa — Acceso")
-    st.caption("Banco v7.10 · app.py correcto.")
+    st.caption("Banco v7.11 · fallos con explicación garantizada.")
     username = st.text_input("Usuario").strip().lower()
     password = st.text_input("Contraseña", type="password")
     if st.button("Entrar", use_container_width=True):
@@ -711,12 +760,12 @@ def render_test(store, df_all):
         selected = st.session_state.selected
         if selected == correct:
             st.success("Correcto.")
-            st.info("Esta pregunta queda como acertada y no entra en repaso de fallos. Continúa para cubrir temario.")
+            st.info("Correcta: queda dominada y no entra en repaso de fallos.")
         else:
             st.error(f"Incorrecto. Respuesta correcta: {correct}. {option_text(q, correct)}")
-            st.warning("Esta pregunta entra en 'Solo mis fallos' hasta que la aciertes en un repaso.")
+            st.warning("Esta pregunta entra en 'Solo mis fallos' y aquí tienes el aprendizaje completo.")
             with st.expander("Aprendizaje profundo del fallo", expanded=True):
-                show_learning(q, selected, correct)
+                render_failure_learning(q, selected, correct)
 
         if st.button("Siguiente pregunta", use_container_width=True):
             st.session_state.idx += 1
@@ -836,7 +885,7 @@ store = st.session_state.store
 
 if not st.session_state.logged:
     st.title("🚑 TES Leixa — Acceso")
-    st.caption("Banco v7.10 · app.py correcto.")
+    st.caption("Banco v7.11 · fallos con explicación garantizada.")
     st.info("La app ya está arrancada. Entra con tu usuario para cargar banco y progreso.")
     render_login(store)
     st.stop()
@@ -857,7 +906,7 @@ except Exception as exc:
     st.stop()
 
 st.title("🚑 TES Leixa — Test táctil")
-st.caption("Banco v7.10 · app.py correcto.")
+st.caption("Banco v7.11 · fallos con explicación garantizada.")
 
 tabs = ["📝 Test táctil", "📊 Estadísticas y planning", "👤 Mi cuenta"]
 if st.session_state.role == "administrador":
