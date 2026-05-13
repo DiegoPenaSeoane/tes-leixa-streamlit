@@ -1,0 +1,10 @@
+{
+  "version": "v806",
+  "preguntas": 3413,
+  "respuestas_invalidas": 0,
+  "ids_duplicados": 0,
+  "filas_medulares_corregidas": 205,
+  "tablas_genericas_mal_asignadas_corregidas": 34,
+  "mismatches_medulares_restantes": 0,
+  "correccion_clave": "Las preguntas de lesión medular/cervical/torácica ya no muestran tablas de huesos ni reglas de comunicación; muestran patrón neurológico por nivel."
+}
