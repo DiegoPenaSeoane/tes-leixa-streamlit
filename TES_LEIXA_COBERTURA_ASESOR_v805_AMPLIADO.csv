@@ -1,0 +1,355 @@
+modulo,tema,subtema,nivel_dificultad,n_preguntas
+MP0053 Logística sanitaria,Agua y saneamiento,Catástrofes,filtro_10,6
+MP0053 Logística sanitaria,Alimentos,Cadena de frío,filtro_10,6
+MP0053 Logística sanitaria,Ambulancias,Accesos,alta,1
+MP0053 Logística sanitaria,Ambulancias,Base,alta,1
+MP0053 Logística sanitaria,Ambulancias,Descarga,alta,1
+MP0053 Logística sanitaria,Ambulancias,Número vehículos,alta,1
+MP0053 Logística sanitaria,Ambulancias,Puesto de espera,alta,1
+MP0053 Logística sanitaria,Ambulancias,Punto de carga,alta,1
+MP0053 Logística sanitaria,Ambulancias,Velocidad,alta,1
+MP0053 Logística sanitaria,BMIE,Estandarización,alta,1
+MP0053 Logística sanitaria,BMIE,Unidades,alta,1
+MP0053 Logística sanitaria,Cadena asistencial,Continuidad asistencial,alta,1
+MP0053 Logística sanitaria,Cadena asistencial,Jerarquización,alta,1
+MP0053 Logística sanitaria,Cadena asistencial,Optimización,alta,1
+MP0053 Logística sanitaria,Cadena asistencial,Transferencias,alta,1
+MP0053 Logística sanitaria,Casos integrados,Comunicaciones,filtro_10,10
+MP0053 Logística sanitaria,Casos integrados,IMV clínico-logístico,filtro_10,10
+MP0053 Logística sanitaria,Casos integrados IMV,Evacuación y centro útil,filtro_10,13
+MP0053 Logística sanitaria,Casos integrados IMV,Triaje + logística,filtro_10,15
+MP0053 Logística sanitaria,Casos integrados logística,CECOP/PMA/PMS,filtro_10,1
+MP0053 Logística sanitaria,Casos integrados logística,Cadena asistencial,filtro_10,1
+MP0053 Logística sanitaria,Casos integrados logística,Catástrofe integrada,filtro_10,1
+MP0053 Logística sanitaria,Casos integrados logística,Medicina de catástrofes,filtro_10,1
+MP0053 Logística sanitaria,Casos integrados logística,Norias y continuidad,filtro_10,1
+MP0053 Logística sanitaria,Casos integrados logística,PSA/CME,filtro_10,1
+MP0053 Logística sanitaria,Centros de coordinación,CECOP,alta,1
+MP0053 Logística sanitaria,Centros de coordinación,CECOPI,alta,1
+MP0053 Logística sanitaria,Centros de coordinación,PMA,alta,1
+MP0053 Logística sanitaria,Comunicaciones,Radio,filtro_10,12
+MP0053 Logística sanitaria,Comunicaciones operativas,Acuse de recibo,alta,3
+MP0053 Logística sanitaria,Comunicaciones operativas,Acuse de recibo,basica,1
+MP0053 Logística sanitaria,Comunicaciones operativas,Acuse de recibo,intermedia,1
+MP0053 Logística sanitaria,Comunicaciones operativas,Canal alternativo,alta,3
+MP0053 Logística sanitaria,Comunicaciones operativas,Canal alternativo,basica,1
+MP0053 Logística sanitaria,Comunicaciones operativas,Canal alternativo,intermedia,1
+MP0053 Logística sanitaria,Comunicaciones operativas,Mensaje operativo,alta,3
+MP0053 Logística sanitaria,Comunicaciones operativas,Mensaje operativo,basica,1
+MP0053 Logística sanitaria,Comunicaciones operativas,Mensaje operativo,intermedia,1
+MP0053 Logística sanitaria,Comunicaciones operativas,Radio y CCU,filtro_10,1
+MP0053 Logística sanitaria,Comunicaciones operativas,"Radio, acuse, repetidores y disciplina de red",filtro_10,156
+MP0053 Logística sanitaria,Evacuación,Norias,filtro_10,6
+MP0053 Logística sanitaria,Evacuación,Puesto de carga,filtro_10,6
+MP0053 Logística sanitaria,Evacuación sanitaria,Centro útil,alta,3
+MP0053 Logística sanitaria,Evacuación sanitaria,Centro útil,basica,1
+MP0053 Logística sanitaria,Evacuación sanitaria,Centro útil,intermedia,1
+MP0053 Logística sanitaria,Evacuación sanitaria,Noria de evacuación,alta,3
+MP0053 Logística sanitaria,Evacuación sanitaria,Noria de evacuación,basica,1
+MP0053 Logística sanitaria,Evacuación sanitaria,Noria de evacuación,intermedia,1
+MP0053 Logística sanitaria,"Gases, residuos y evacuación",Botellas de gas,alta,3
+MP0053 Logística sanitaria,"Gases, residuos y evacuación",Botellas de gas,basica,1
+MP0053 Logística sanitaria,"Gases, residuos y evacuación",Botellas de gas,intermedia,1
+MP0053 Logística sanitaria,"Gases, residuos y evacuación",Oxígeno medicinal,alta,3
+MP0053 Logística sanitaria,"Gases, residuos y evacuación",Oxígeno medicinal,basica,1
+MP0053 Logística sanitaria,"Gases, residuos y evacuación",Oxígeno medicinal,intermedia,1
+MP0053 Logística sanitaria,"Gases, residuos y evacuación",Residuos sanitarios,alta,3
+MP0053 Logística sanitaria,"Gases, residuos y evacuación",Residuos sanitarios,basica,1
+MP0053 Logística sanitaria,"Gases, residuos y evacuación",Residuos sanitarios,intermedia,1
+MP0053 Logística sanitaria,Grupo sanitario,PMS,alta,1
+MP0053 Logística sanitaria,Grupos de acción,Intervención,alta,1
+MP0053 Logística sanitaria,Grupos de acción,Logístico,alta,1
+MP0053 Logística sanitaria,Grupos de acción,Seguridad,alta,1
+MP0053 Logística sanitaria,Hospital de campaña,Flujos,filtro_10,6
+MP0053 Logística sanitaria,Logística de catástrofes,Autonomía logística,alta,3
+MP0053 Logística sanitaria,Logística de catástrofes,Autonomía logística,basica,1
+MP0053 Logística sanitaria,Logística de catástrofes,Autonomía logística,intermedia,1
+MP0053 Logística sanitaria,Logística de catástrofes,Trazabilidad,alta,3
+MP0053 Logística sanitaria,Logística de catástrofes,Trazabilidad,basica,1
+MP0053 Logística sanitaria,Logística de catástrofes,Trazabilidad,intermedia,1
+MP0053 Logística sanitaria,Logística operativa en emergencias,Ampliación v805,alta,20
+MP0053 Logística sanitaria,Logística operativa en emergencias,Ampliación v805,basica,20
+MP0053 Logística sanitaria,Logística operativa en emergencias,Ampliación v805,intermedia,20
+MP0053 Logística sanitaria,Logística sanitaria,"Stock, agua, alimentos, residuos y material",filtro_10,251
+MP0053 Logística sanitaria,Logística y DRP,Primera unidad en IMV,alta,1
+MP0053 Logística sanitaria,Medicina de catástrofes,Características,alta,1
+MP0053 Logística sanitaria,Medicina de catástrofes,Escasez,alta,1
+MP0053 Logística sanitaria,Norias,Concepto,alta,1
+MP0053 Logística sanitaria,Norias,Dispersión,alta,1
+MP0053 Logística sanitaria,Norias,Evacuación,alta,1
+MP0053 Logística sanitaria,Norias,Interhospitalaria,alta,1
+MP0053 Logística sanitaria,Norias,Noria cero,alta,1
+MP0053 Logística sanitaria,Norias,Primera noria,alta,1
+MP0053 Logística sanitaria,Norias,Recogida,alta,1
+MP0053 Logística sanitaria,Norias,Rescate,alta,1
+MP0053 Logística sanitaria,Norias de evacuación,Evacuación regulada,filtro_10,1
+MP0053 Logística sanitaria,PMA,Puesto Médico Avanzado,alta,3
+MP0053 Logística sanitaria,PMA,Puesto Médico Avanzado,basica,1
+MP0053 Logística sanitaria,PMA,Puesto Médico Avanzado,intermedia,1
+MP0053 Logística sanitaria,PMA,Puesto de carga de ambulancias,alta,3
+MP0053 Logística sanitaria,PMA,Puesto de carga de ambulancias,basica,1
+MP0053 Logística sanitaria,PMA,Puesto de carga de ambulancias,intermedia,1
+MP0053 Logística sanitaria,PSA/CME/Hospital,CME,alta,1
+MP0053 Logística sanitaria,PSA/CME/Hospital,Hospital de campaña,alta,1
+MP0053 Logística sanitaria,PSA/CME/Hospital,PSA,alta,1
+MP0053 Logística sanitaria,Residuos,Biosanitarios,filtro_10,6
+MP0053 Logística sanitaria,Respuesta ante catástrofes,Fase inmediata,alta,1
+MP0053 Logística sanitaria,Respuesta ante catástrofes,Fase secundaria,alta,1
+MP0053 Logística sanitaria,Respuesta ante catástrofes,Fase terciaria,alta,1
+MP0053 Logística sanitaria,Respuesta ante catástrofes,Fases de respuesta,alta,1
+MP0053 Logística sanitaria,Sectorización,Cuadrícula,alta,1
+MP0053 Logística sanitaria,Sectorización,Zonas,alta,2
+MP0053 Logística sanitaria,Sectorización IMV,Zonas,filtro_10,12
+MP0053 Logística sanitaria,Sectorización y evacuación,"Zonas, norias, puesto de carga y centro útil",filtro_10,163
+MP0053 Logística sanitaria,Sectorización y zonas,Zona caliente,alta,3
+MP0053 Logística sanitaria,Sectorización y zonas,Zona caliente,basica,1
+MP0053 Logística sanitaria,Sectorización y zonas,Zona caliente,intermedia,1
+MP0053 Logística sanitaria,Sectorización y zonas,Zona fría,alta,3
+MP0053 Logística sanitaria,Sectorización y zonas,Zona fría,basica,1
+MP0053 Logística sanitaria,Sectorización y zonas,Zona fría,intermedia,1
+MP0053 Logística sanitaria,Sectorización y zonas,Zona templada,alta,3
+MP0053 Logística sanitaria,Sectorización y zonas,Zona templada,basica,1
+MP0053 Logística sanitaria,Sectorización y zonas,Zona templada,intermedia,1
+MP0053 Logística sanitaria,"Seguridad, señalización y EPI",EPI,alta,3
+MP0053 Logística sanitaria,"Seguridad, señalización y EPI",EPI,basica,1
+MP0053 Logística sanitaria,"Seguridad, señalización y EPI",EPI,intermedia,1
+MP0053 Logística sanitaria,"Seguridad, señalización y EPI",Señalización de seguridad,alta,3
+MP0053 Logística sanitaria,"Seguridad, señalización y EPI",Señalización de seguridad,basica,1
+MP0053 Logística sanitaria,"Seguridad, señalización y EPI",Señalización de seguridad,intermedia,1
+MP0053 Logística sanitaria,Stock,Cadena de frío,alta,1
+MP0053 Logística sanitaria,Stock,FEFO/FIFO,intermedia,1
+MP0053 Logística sanitaria,Stock sanitario,FEFO/FIFO avanzado,filtro_10,1
+MP0053 Logística sanitaria,Stock sanitario,Inventario,filtro_10,12
+MP0053 Logística sanitaria,Stock y almacenamiento,FEFO,alta,3
+MP0053 Logística sanitaria,Stock y almacenamiento,FEFO,basica,1
+MP0053 Logística sanitaria,Stock y almacenamiento,FEFO,intermedia,1
+MP0053 Logística sanitaria,Stock y almacenamiento,FIFO,alta,3
+MP0053 Logística sanitaria,Stock y almacenamiento,FIFO,basica,1
+MP0053 Logística sanitaria,Stock y almacenamiento,FIFO,intermedia,1
+MP0053 Logística sanitaria,Stock y almacenamiento,Stock de seguridad,alta,3
+MP0053 Logística sanitaria,Stock y almacenamiento,Stock de seguridad,basica,1
+MP0053 Logística sanitaria,Stock y almacenamiento,Stock de seguridad,intermedia,1
+MP0053 Logística sanitaria,Tarjeta médica,Anverso,alta,1
+MP0053 Logística sanitaria,Tarjeta médica,Cambio de prioridad,alta,1
+MP0053 Logística sanitaria,Tarjeta médica,Finalidad,alta,1
+MP0053 Logística sanitaria,Tarjeta médica,Formato,alta,1
+MP0053 Logística sanitaria,Tarjeta médica,Franjas,alta,1
+MP0053 Logística sanitaria,Tarjeta médica,IV/IM,alta,1
+MP0053 Logística sanitaria,Tarjeta médica,Prioridad,alta,1
+MP0053 Logística sanitaria,Tarjeta médica,Trazabilidad,alta,1
+MP0053 Logística sanitaria,Triaje,Tipos,alta,2
+MP0053 Logística sanitaria,Triaje IMV,START,filtro_10,18
+MP0053 Logística sanitaria,Triaje START,Colores,alta,2
+MP0053 Logística sanitaria,Triaje en IMV,"START, colores y reevaluación",filtro_10,252
+MP0059 Planes de emergencias,Activación,Alerta/alarma,filtro_10,12
+MP0059 Planes de emergencias,Activación de planes,Fase de alerta,alta,3
+MP0059 Planes de emergencias,Activación de planes,Fase de alerta,basica,1
+MP0059 Planes de emergencias,Activación de planes,Fase de alerta,intermedia,1
+MP0059 Planes de emergencias,Activación de planes,Fase de emergencia,alta,3
+MP0059 Planes de emergencias,Activación de planes,Fase de emergencia,basica,1
+MP0059 Planes de emergencias,Activación de planes,Fase de emergencia,intermedia,1
+MP0059 Planes de emergencias,Casos integrados,DRP-operativa,filtro_10,10
+MP0059 Planes de emergencias,Casos integrados planes,DRP y comunicación,filtro_10,13
+MP0059 Planes de emergencias,Casos integrados planes,Interfase y activación,filtro_10,14
+MP0059 Planes de emergencias,Catálogo,Medios y recursos,filtro_10,6
+MP0059 Planes de emergencias,Control de accesos,Perímetros,alta,3
+MP0059 Planes de emergencias,Control de accesos,Perímetros,basica,1
+MP0059 Planes de emergencias,Control de accesos,Perímetros,intermedia,1
+MP0059 Planes de emergencias,DRP,Dispositivo de riesgos previsibles,alta,3
+MP0059 Planes de emergencias,DRP,Dispositivo de riesgos previsibles,basica,1
+MP0059 Planes de emergencias,DRP,Dispositivo de riesgos previsibles,intermedia,1
+MP0059 Planes de emergencias,DRP,Hipótesis,filtro_10,12
+MP0059 Planes de emergencias,Ejecución de un DRP,Activación,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Ambulancia regreso,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Briefing final,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Briefing inicial,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Costes finales,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Cronograma,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Datos estadísticos,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Desactivación completa,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Desactivación con riesgo,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Desactivación parcial,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Desactivación simultánea,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Desmontaje material,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Diseño siguiente,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Documentación diferida,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Documentos legales,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Equipo directivo,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Evento varios días,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Fallo de comunicaciones,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Llegada a almacén,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Materiales,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Memoria DRP,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Montaje,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Operatividad,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,PSA exterior,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,PSA interior,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Perfiles profesionales,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,"Planes Tema 5: preparación, activación, operatividad, desactivación, desmontaje y análisis",filtro_10,104
+MP0059 Planes de emergencias,Ejecución de un DRP,Preparación previa,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Puesto sanitario avanzado,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Reserva de espacios,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Residuos,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Rutas de evacuación,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Turnos largos,alta,1
+MP0059 Planes de emergencias,Ejecución de un DRP,Vehículos y comunicaciones,alta,1
+MP0059 Planes de emergencias,Ejecución y simulacro,Memoria final,alta,3
+MP0059 Planes de emergencias,Ejecución y simulacro,Memoria final,basica,1
+MP0059 Planes de emergencias,Ejecución y simulacro,Memoria final,intermedia,1
+MP0059 Planes de emergencias,Ejecución y simulacro,Simulacro,alta,3
+MP0059 Planes de emergencias,Ejecución y simulacro,Simulacro,basica,1
+MP0059 Planes de emergencias,Ejecución y simulacro,Simulacro,intermedia,1
+MP0059 Planes de emergencias,Información a población,Avisos,alta,3
+MP0059 Planes de emergencias,Información a población,Avisos,basica,1
+MP0059 Planes de emergencias,Información a población,Avisos,intermedia,1
+MP0059 Planes de emergencias,Interfase,Planes,filtro_10,6
+MP0059 Planes de emergencias,Mapas de riesgo y DRP,Hipótesis operativa,alta,3
+MP0059 Planes de emergencias,Mapas de riesgo y DRP,Hipótesis operativa,basica,1
+MP0059 Planes de emergencias,Mapas de riesgo y DRP,Hipótesis operativa,intermedia,1
+MP0059 Planes de emergencias,Mapas de riesgo y DRP,Mapa de riesgos,alta,3
+MP0059 Planes de emergencias,Mapas de riesgo y DRP,Mapa de riesgos,basica,1
+MP0059 Planes de emergencias,Mapas de riesgo y DRP,Mapa de riesgos,intermedia,1
+MP0059 Planes de emergencias,Planes y DRP,"Activación, tipos, órganos y riesgo",filtro_10,563
+MP0059 Planes de emergencias,Planes y riesgos,Reevaluación dinámica,filtro_10,1
+MP0059 Planes de emergencias,Planificación y dispositivos,Ampliación v805,alta,20
+MP0059 Planes de emergencias,Planificación y dispositivos,Ampliación v805,basica,20
+MP0059 Planes de emergencias,Planificación y dispositivos,Ampliación v805,intermedia,20
+MP0059 Planes de emergencias,Protocolos tiempo-dependientes,Código ictus,alta,3
+MP0059 Planes de emergencias,Protocolos tiempo-dependientes,Código ictus,basica,1
+MP0059 Planes de emergencias,Protocolos tiempo-dependientes,Código ictus,intermedia,1
+MP0059 Planes de emergencias,Protocolos tiempo-dependientes,PCR,alta,3
+MP0059 Planes de emergencias,Protocolos tiempo-dependientes,PCR,basica,1
+MP0059 Planes de emergencias,Protocolos tiempo-dependientes,PCR,intermedia,1
+MP0059 Planes de emergencias,Protocolos tiempo-dependientes,Sepsis,alta,3
+MP0059 Planes de emergencias,Protocolos tiempo-dependientes,Sepsis,basica,1
+MP0059 Planes de emergencias,Protocolos tiempo-dependientes,Sepsis,intermedia,1
+MP0059 Planes de emergencias,Rehabilitación,Fases,filtro_10,6
+MP0059 Planes de emergencias,Riesgo,MARI,filtro_10,6
+MP0059 Planes de emergencias,Riesgo,Mapas,filtro_10,6
+MP0059 Planes de emergencias,"Riesgo, daño y vulnerabilidad",Riesgo,alta,3
+MP0059 Planes de emergencias,"Riesgo, daño y vulnerabilidad",Riesgo,basica,1
+MP0059 Planes de emergencias,"Riesgo, daño y vulnerabilidad",Riesgo,intermedia,1
+MP0059 Planes de emergencias,"Riesgo, daño y vulnerabilidad",Vulnerabilidad,alta,3
+MP0059 Planes de emergencias,"Riesgo, daño y vulnerabilidad",Vulnerabilidad,basica,1
+MP0059 Planes de emergencias,"Riesgo, daño y vulnerabilidad",Vulnerabilidad,intermedia,1
+MP0059 Planes de emergencias,Tipos de planes,Clasificación,filtro_10,12
+MP0059 Planes de emergencias,Tipos de planes,Plan de autoprotección,alta,3
+MP0059 Planes de emergencias,Tipos de planes,Plan de autoprotección,basica,1
+MP0059 Planes de emergencias,Tipos de planes,Plan de autoprotección,intermedia,1
+MP0059 Planes de emergencias,Tipos de planes,Plan especial,alta,3
+MP0059 Planes de emergencias,Tipos de planes,Plan especial,basica,1
+MP0059 Planes de emergencias,Tipos de planes,Plan especial,intermedia,1
+MP0059 Planes de emergencias,Tipos de planes,Plan territorial,alta,3
+MP0059 Planes de emergencias,Tipos de planes,Plan territorial,basica,1
+MP0059 Planes de emergencias,Tipos de planes,Plan territorial,intermedia,1
+MP0059 Planes de emergencias,Tipos de planes,Plan territorial/especial/autoprotección,filtro_10,1
+MP0059 Planes de emergencias,Triaje,START,alta,1
+MP0059 Planes de emergencias,Triaje,START,intermedia,1
+MP0059 Planes de emergencias,Órganos y grupos,Director del plan,alta,3
+MP0059 Planes de emergencias,Órganos y grupos,Director del plan,basica,1
+MP0059 Planes de emergencias,Órganos y grupos,Director del plan,intermedia,1
+MP0059 Planes de emergencias,Órganos y grupos,Estructura,filtro_10,12
+MP0059 Planes de emergencias,Órganos y grupos,Grupo sanitario,alta,3
+MP0059 Planes de emergencias,Órganos y grupos,Grupo sanitario,basica,1
+MP0059 Planes de emergencias,Órganos y grupos,Grupo sanitario,intermedia,1
+MP0059 Planes de emergencias,Órganos y grupos,PMA,alta,3
+MP0059 Planes de emergencias,Órganos y grupos,PMA,basica,1
+MP0059 Planes de emergencias,Órganos y grupos,PMA,intermedia,1
+MP0061 Anatomofisiología,Abdomen clínico,Topografía abdominal,filtro_10,10
+MP0061 Anatomofisiología,Anatomofisiología aplicada a emergencias,Ampliación v805,alta,20
+MP0061 Anatomofisiología,Anatomofisiología aplicada a emergencias,Ampliación v805,basica,20
+MP0061 Anatomofisiología,Anatomofisiología aplicada a emergencias,Ampliación v805,intermedia,20
+MP0061 Anatomofisiología,Anatomía aplicada,Trauma y shock,filtro_10,14
+MP0061 Anatomofisiología,Anatomía aplicada TES,Puntos de palpación,filtro_10,10
+MP0061 Anatomofisiología,Anatomía aplicada TES,Términos direccionales,filtro_10,10
+MP0061 Anatomofisiología,Anatomía topográfica,Cavidades corporales,alta,3
+MP0061 Anatomofisiología,Anatomía topográfica,Cavidades corporales,basica,1
+MP0061 Anatomofisiología,Anatomía topográfica,Cavidades corporales,intermedia,1
+MP0061 Anatomofisiología,Anatomía topográfica,Planos y cavidades,filtro_10,116
+MP0061 Anatomofisiología,Anatomía topográfica,Planos y términos direccionales,alta,3
+MP0061 Anatomofisiología,Anatomía topográfica,Planos y términos direccionales,basica,1
+MP0061 Anatomofisiología,Anatomía topográfica,Planos y términos direccionales,intermedia,1
+MP0061 Anatomofisiología,Anatomía topográfica,Términos direccionales,alta,3
+MP0061 Anatomofisiología,Anatomía topográfica,Términos direccionales,filtro_10,110
+MP0061 Anatomofisiología,Anatomía topográfica clínica,"Órganos, regiones y trauma",filtro_10,141
+MP0061 Anatomofisiología,Anatomía y fisiopatología torácica,Neumotórax a tensión,alta,1
+MP0061 Anatomofisiología,Anatomía y fisiopatología torácica,Trauma torácico grave,filtro_10,86
+MP0061 Anatomofisiología,Cardiocirculatorio,ECG básico,filtro_10,5
+MP0061 Anatomofisiología,Cardiocirculatorio,"ECG, presión arterial y válvulas",filtro_10,143
+MP0061 Anatomofisiología,Cardiocirculatorio,Presión arterial,filtro_10,5
+MP0061 Anatomofisiología,Cardiocirculatorio,Shock,filtro_10,1
+MP0061 Anatomofisiología,"Cardiocirculatorio, respiratorio y sangre",Conducción cardíaca,alta,3
+MP0061 Anatomofisiología,"Cardiocirculatorio, respiratorio y sangre",Conducción cardíaca,basica,1
+MP0061 Anatomofisiología,"Cardiocirculatorio, respiratorio y sangre",Conducción cardíaca,intermedia,1
+MP0061 Anatomofisiología,"Cardiocirculatorio, respiratorio y sangre",Hemostasia,alta,3
+MP0061 Anatomofisiología,"Cardiocirculatorio, respiratorio y sangre",Hemostasia,basica,1
+MP0061 Anatomofisiología,"Cardiocirculatorio, respiratorio y sangre",Hemostasia,intermedia,1
+MP0061 Anatomofisiología,"Cardiocirculatorio, respiratorio y sangre",Intercambio gaseoso,alta,3
+MP0061 Anatomofisiología,"Cardiocirculatorio, respiratorio y sangre",Intercambio gaseoso,basica,1
+MP0061 Anatomofisiología,"Cardiocirculatorio, respiratorio y sangre",Intercambio gaseoso,intermedia,1
+MP0061 Anatomofisiología,"Cardiocirculatorio, respiratorio y sangre",RCP,alta,3
+MP0061 Anatomofisiología,"Cardiocirculatorio, respiratorio y sangre",RCP,basica,1
+MP0061 Anatomofisiología,"Cardiocirculatorio, respiratorio y sangre",RCP,intermedia,1
+MP0061 Anatomofisiología,"Cardiocirculatorio, respiratorio y sangre",Shock,alta,3
+MP0061 Anatomofisiología,"Cardiocirculatorio, respiratorio y sangre",Shock,basica,1
+MP0061 Anatomofisiología,"Cardiocirculatorio, respiratorio y sangre",Shock,intermedia,1
+MP0061 Anatomofisiología,"Cardiocirculatorio, respiratorio y sangre",Ventilación,alta,3
+MP0061 Anatomofisiología,"Cardiocirculatorio, respiratorio y sangre",Ventilación,basica,1
+MP0061 Anatomofisiología,"Cardiocirculatorio, respiratorio y sangre",Ventilación,intermedia,1
+MP0061 Anatomofisiología,Casos integrados,Abdomen clínico,filtro_10,10
+MP0061 Anatomofisiología,Casos integrados,Trauma torácico,filtro_10,10
+MP0061 Anatomofisiología,"Digestivo, renal, endocrino e inmunidad",Diabetes,alta,3
+MP0061 Anatomofisiología,"Digestivo, renal, endocrino e inmunidad",Diabetes,basica,1
+MP0061 Anatomofisiología,"Digestivo, renal, endocrino e inmunidad",Diabetes,intermedia,1
+MP0061 Anatomofisiología,"Digestivo, renal, endocrino e inmunidad",Digestión,alta,3
+MP0061 Anatomofisiología,"Digestivo, renal, endocrino e inmunidad",Digestión,basica,1
+MP0061 Anatomofisiología,"Digestivo, renal, endocrino e inmunidad",Digestión,intermedia,1
+MP0061 Anatomofisiología,"Digestivo, renal, endocrino e inmunidad",Filtración renal,alta,3
+MP0061 Anatomofisiología,"Digestivo, renal, endocrino e inmunidad",Filtración renal,basica,1
+MP0061 Anatomofisiología,"Digestivo, renal, endocrino e inmunidad",Filtración renal,intermedia,1
+MP0061 Anatomofisiología,"Digestivo, renal, endocrino e inmunidad",Glucemia,alta,3
+MP0061 Anatomofisiología,"Digestivo, renal, endocrino e inmunidad",Glucemia,basica,1
+MP0061 Anatomofisiología,"Digestivo, renal, endocrino e inmunidad",Glucemia,intermedia,1
+MP0061 Anatomofisiología,"Digestivo, renal, endocrino e inmunidad",Inmunidad,alta,3
+MP0061 Anatomofisiología,"Digestivo, renal, endocrino e inmunidad",Inmunidad,basica,1
+MP0061 Anatomofisiología,"Digestivo, renal, endocrino e inmunidad",Inmunidad,intermedia,1
+MP0061 Anatomofisiología,Endocrino,Páncreas,filtro_10,5
+MP0061 Anatomofisiología,Neurología,Glasgow,alta,1
+MP0061 Anatomofisiología,Neurología,Glasgow,filtro_10,5
+MP0061 Anatomofisiología,Neurología,Glasgow,intermedia,1
+MP0061 Anatomofisiología,Neurología,Pupilas,filtro_10,5
+MP0061 Anatomofisiología,Neurológico,Glasgow y respuesta neurológica,filtro_10,127
+MP0061 Anatomofisiología,Neurológico,Pupilas y semiología,filtro_10,71
+MP0061 Anatomofisiología,Obstetricia básica,Gestación,filtro_10,5
+MP0061 Anatomofisiología,Patología general,Etiología y patogenia,alta,3
+MP0061 Anatomofisiología,Patología general,Etiología y patogenia,basica,1
+MP0061 Anatomofisiología,Patología general,Etiología y patogenia,intermedia,1
+MP0061 Anatomofisiología,Patología general,Inflamación,alta,3
+MP0061 Anatomofisiología,Patología general,Inflamación,basica,1
+MP0061 Anatomofisiología,Patología general,Inflamación,intermedia,1
+MP0061 Anatomofisiología,Patología general,Sepsis,alta,3
+MP0061 Anatomofisiología,Patología general,Sepsis,basica,1
+MP0061 Anatomofisiología,Patología general,Sepsis,intermedia,1
+MP0061 Anatomofisiología,Renal,Retroperitoneo,filtro_10,5
+MP0061 Anatomofisiología,Respiratorio,Fisiopatología,filtro_10,5
+MP0061 Anatomofisiología,Respiratorio y fisiopatología,"Hipoxia, hipoxemia e intercambio gaseoso",filtro_10,78
+MP0061 Anatomofisiología,Sangre,Hemostasia,filtro_10,5
+MP0061 Anatomofisiología,Sistema locomotor,Columna y médula,filtro_10,5
+MP0061 Anatomofisiología,Sistema locomotor,Palancas y movilización,filtro_10,1
+MP0061 Anatomofisiología,Sistema locomotor,Pelvis,filtro_10,5
+MP0061 Anatomofisiología,Sistema nervioso,Valoración pupilar,filtro_10,1
+MP0061 Anatomofisiología,Sistema nervioso y locomotor,ACV,alta,3
+MP0061 Anatomofisiología,Sistema nervioso y locomotor,ACV,basica,1
+MP0061 Anatomofisiología,Sistema nervioso y locomotor,ACV,intermedia,1
+MP0061 Anatomofisiología,Sistema nervioso y locomotor,Columna vertebral,alta,3
+MP0061 Anatomofisiología,Sistema nervioso y locomotor,Columna vertebral,basica,1
+MP0061 Anatomofisiología,Sistema nervioso y locomotor,Columna vertebral,intermedia,1
+MP0061 Anatomofisiología,Sistema nervioso y locomotor,Huesos de miembros,alta,3
+MP0061 Anatomofisiología,Sistema nervioso y locomotor,Huesos de miembros,basica,1
+MP0061 Anatomofisiología,Sistema nervioso y locomotor,Huesos de miembros,intermedia,1
+MP0061 Anatomofisiología,Sistema nervioso y locomotor,Sistema nervioso autónomo,alta,3
+MP0061 Anatomofisiología,Sistema nervioso y locomotor,Sistema nervioso autónomo,basica,1
+MP0061 Anatomofisiología,Sistema nervioso y locomotor,Sistema nervioso autónomo,intermedia,1
+MP0061 Anatomofisiología,Sistemas corporales,"Digestivo, renal, endocrino, sangre y reproductor",filtro_10,185
+MP0061 Anatomofisiología,Trauma anatómico y sistema locomotor,"Columna, pelvis, costillas y TCE",filtro_10,75
+MP0061 Anatomofisiología,Tórax y respiratorio,Urgencia torácica,filtro_10,10

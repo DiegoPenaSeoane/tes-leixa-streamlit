@@ -1,0 +1,31 @@
+{
+  "version_paquete": "v805_ampliado_desde_v804",
+  "fecha_generacion": "2026-05-13T09:47:51",
+  "fuente": "TES_LEIXA_v804 + ampliación docente generada para asesor",
+  "total_preguntas": 3593,
+  "respuestas_invalidas": 0,
+  "ids_duplicados": 0,
+  "incidencias_potenciales": 27,
+  "preguntas_por_modulo": {
+    "MP0061 Anatomofisiología": 1430,
+    "MP0053 Logística sanitaria": 1184,
+    "MP0059 Planes de emergencias": 979
+  },
+  "preguntas_por_dificultad": {
+    "filtro_10": 3017,
+    "alta": 333,
+    "intermedia": 123,
+    "basica": 120
+  },
+  "preguntas_por_tipo": {
+    "caso_operativo": 1304,
+    "caso_clinico": 1130,
+    "triaje_frontera": 467,
+    "comprension": 350,
+    "calculo": 231,
+    "legislacion": 105,
+    "refuerzo_v802": 6
+  },
+  "preguntas_nuevas_v805": 180,
+  "nota_integracion": "Se añaden preguntas nuevas con IDs V805-LOG/PLA/ANA. No se modifican usuarios, contraseñas, progreso, login ni lógica de Streamlit."
+}

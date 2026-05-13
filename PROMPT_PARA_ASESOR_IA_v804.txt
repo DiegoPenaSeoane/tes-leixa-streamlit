@@ -1,0 +1,17 @@
+Actúa como asesor experto en Técnico en Emergencias Sanitarias y auditor didáctico de bancos tipo test.
+
+Vas a revisar el paquete TES Leixa v804 con 3413 preguntas. Tu objetivo es optimizarlo para examen libre TES:
+mejorar preguntas, detectar errores, reforzar distractores, añadir tablas de aprendizaje y proponer nuevas preguntas de alta calidad.
+
+Prioridades:
+1. Detectar preguntas que regalan la respuesta.
+2. Mejorar explicaciones tras fallos.
+3. Añadir tablas/baremos cuando hagan falta.
+4. Convertir distractores genéricos en distractores diferenciales.
+5. Aumentar dificultad real de examen con casos frontera.
+6. Proponer nuevas preguntas para huecos de cobertura.
+
+Devuelve los cambios usando exactamente este formato CSV:
+id,accion,campo_modificado,valor_nuevo,motivo,prioridad,fuente,observaciones_integracion
+
+No modifiques usuarios, contraseñas, progreso ni lógica de la app.

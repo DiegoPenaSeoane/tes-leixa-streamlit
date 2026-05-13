@@ -1,0 +1,2 @@
+﻿id,accion,campo_modificado,valor_nuevo,motivo,prioridad,fuente,observaciones_integracion
+EJEMPLO_ID_EXISTENTE_O_NUEVO,modificar|crear|eliminar|fusionar,enunciado|opcion_a|explicacion|porque_no_b|tabla_esquema|...,Texto nuevo propuesto por el asesor,Por qué mejora el aprendizaje o corrige error,alta|media|baja,BOE/Xunta/apuntes/protocolo/etc.,Notas para importar sin romper la app
