@@ -1,0 +1,27 @@
+# Control de calidad v817
+
+Preguntas totales: 9813
+
+| modulo                       |   count |
+|:-----------------------------|--------:|
+| MP0061 Anatomofisiología     |    4570 |
+| MP0053 Logística sanitaria   |    3124 |
+| MP0059 Planes de emergencias |    2119 |
+
+## Métricas internas
+
+- Conceptos base: 319.
+- Familias de distractores: 32.
+- Máxima racha de misma familia tras mezcla: 3.
+- Opciones duplicadas por pregunta: 0.
+- Respuesta correcta literal en enunciado: 0.
+
+## Criterio aplicado
+
+No se han usado distractores de relleno. Ejemplos de familias cerradas:
+
+- Vejiga / uretra / uréter / próstata / vesícula seminal / testículo.
+- Hipoxia / hipoxemia / hipercapnia / isquemia / anoxia / cianosis.
+- Fémur / tibia / peroné / húmero / radio / cúbito.
+- FIFO / FEFO / rotura de stock / stock mínimo / punto de pedido / pedido mínimo.
+- CECOP / CECOPI / PMA / PMS / dirección del plan / comité asesor / gabinete de información.
