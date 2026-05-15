@@ -1,0 +1,29 @@
+"""Carga del banco TES v809 PLUS para Streamlit."""
+from __future__ import annotations
+import csv, json
+from pathlib import Path
+
+REQUIRED_COLUMNS = {
+    "id", "materia", "pregunta", "opcion_A", "opcion_B", "opcion_C", "opcion_D",
+    "respuesta_correcta", "explicacion_corta", "explicacion_extendida", "concepto_clave"
+}
+
+def load_question_bank(path: str | Path) -> list[dict]:
+    path = Path(path)
+    if path.suffix.lower() == ".json":
+        data = json.loads(path.read_text(encoding="utf-8"))
+    else:
+        with path.open("r", encoding="utf-8-sig", newline="") as f:
+            data = list(csv.DictReader(f))
+    if not data:
+        raise ValueError(f"Banco vacío: {path}")
+    missing = REQUIRED_COLUMNS - set(data[0].keys())
+    if missing:
+        raise ValueError(f"Faltan columnas obligatorias en {path}: {sorted(missing)}")
+    return data
+
+def group_by_concept(questions: list[dict]) -> dict[str, list[dict]]:
+    out = {}
+    for q in questions:
+        out.setdefault(q.get("concepto_clave", "Sin concepto"), []).append(q)
+    return out

@@ -1,0 +1,122 @@
+"""
+Motor de repaso espaciado simple para TES v809 PLUS.
+No usa dependencias externas. Pensado para integrarse en Streamlit con st.session_state.
+"""
+from __future__ import annotations
+from datetime import datetime, timedelta
+import random
+
+DEFAULT_STATE = {
+    "attempts": 0,
+    "correct": 0,
+    "wrong": 0,
+    "streak": 0,
+    "ease": 2.3,
+    "interval_days": 0,
+    "leitner_box": 1,
+    "last_result": None,
+    "last_seen_at": None,
+    "due_at": None,
+    "weak_concept": False,
+}
+
+def _now():
+    return datetime.now()
+
+def ensure_state(review_state: dict, question_id: str) -> dict:
+    if question_id not in review_state:
+        review_state[question_id] = dict(DEFAULT_STATE)
+    return review_state[question_id]
+
+def update_review_state(review_state: dict, question: dict, result: str) -> dict:
+    """Actualiza el estado tras responder.
+
+    result admitidos:
+    - "fail_concept": fallo por concepto
+    - "fail_slip": fallo por despiste
+    - "doubt": acierto dudoso
+    - "correct": acierto normal
+    - "easy": acierto fácil
+    """
+    qid = question.get("id") or question.get("question_id")
+    st = ensure_state(review_state, qid)
+    st["attempts"] += 1
+    st["last_result"] = result
+    st["last_seen_at"] = _now().isoformat(timespec="seconds")
+
+    if result in ("fail_concept", "fail_slip"):
+        st["wrong"] += 1
+        st["streak"] = 0
+        st["leitner_box"] = 1
+        st["weak_concept"] = result == "fail_concept"
+        st["ease"] = max(1.3, st["ease"] - (0.25 if result == "fail_concept" else 0.15))
+        hours = int(question.get("intervalo_si_falla_horas") or 6)
+        st["interval_days"] = 0
+        st["due_at"] = (_now() + timedelta(hours=hours)).isoformat(timespec="seconds")
+        return st
+
+    st["correct"] += 1
+    st["streak"] += 1
+    st["weak_concept"] = False
+
+    if result == "doubt":
+        st["ease"] = max(1.3, st["ease"] - 0.05)
+        multiplier = 0.7
+    elif result == "easy":
+        st["ease"] = min(2.8, st["ease"] + 0.15)
+        multiplier = 1.35
+    else:
+        multiplier = 1.0
+
+    st["leitner_box"] = min(5, st["leitner_box"] + 1)
+    if st["interval_days"] <= 0:
+        base = int(question.get("intervalo_si_acierta_dias") or 2)
+    else:
+        base = st["interval_days"]
+    next_days = max(1, round(base * st["ease"] * multiplier))
+    if st["streak"] >= 3:
+        next_days = max(next_days, 7)
+    st["interval_days"] = next_days
+    st["due_at"] = (_now() + timedelta(days=next_days)).isoformat(timespec="seconds")
+    return st
+
+def score_question_for_review(question: dict, state: dict | None) -> float:
+    """Devuelve puntuación alta para preguntas que conviene mostrar antes."""
+    if state is None:
+        return 25.0 if question.get("dificultad") == "Muy alta" else 18.0
+    score = 0.0
+    due_at = state.get("due_at")
+    if due_at:
+        try:
+            due_dt = datetime.fromisoformat(due_at)
+            if due_dt <= _now():
+                score += 50
+        except Exception:
+            score += 10
+    if state.get("wrong", 0) > state.get("correct", 0):
+        score += 25
+    if state.get("weak_concept"):
+        score += 20
+    score += max(0, 5 - state.get("leitner_box", 1)) * 3
+    if question.get("dificultad") == "Muy alta":
+        score += 6
+    return score
+
+def select_next_questions(questions: list[dict], review_state: dict, n: int = 20) -> list[dict]:
+    """Selecciona próximas preguntas mezclando vencidas, falladas y nuevas."""
+    scored = []
+    for q in questions:
+        qid = q.get("id") or q.get("question_id")
+        st = review_state.get(qid)
+        scored.append((score_question_for_review(q, st) + random.random(), q))
+    scored.sort(key=lambda x: x[0], reverse=True)
+    return [q for _, q in scored[:n]]
+
+def concept_is_weak(questions: list[dict], review_state: dict, concept: str) -> bool:
+    wrong = correct = 0
+    for q in questions:
+        if q.get("concepto_clave") == concept:
+            st = review_state.get(q.get("id"), {})
+            wrong += st.get("wrong", 0)
+            correct += st.get("correct", 0)
+    return wrong >= 2 and wrong >= correct

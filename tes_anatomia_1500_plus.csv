@@ -1,0 +1,44 @@
+# TES v809 PLUS — actualización de banco y repasos
+
+Contenido listo para arrastrar a un repositorio GitHub/Streamlit sin tocar el ZIP original v809.
+
+## Qué incluye
+
+- `data/tes_banco_master_2400_plus.csv`: 2400 preguntas totales.
+- `data/tes_anatomia_1500_plus.csv`: 1500 preguntas de anatomía.
+- `data/tes_logistica_900_plus.csv`: 900 preguntas de logística.
+- `data/tes_banco_master_2400_plus.json`: banco completo en JSON.
+- `data/tes_tabla_conceptos_puros_plus.csv`: tabla de datos puros/conceptos.
+- `data/review_config_v809_plus.json`: reglas del motor de repaso.
+- `app_modules/review_scheduler.py`: módulo independiente de repaso espaciado.
+- `app_modules/import_bank.py`: carga robusta CSV/JSON para Streamlit.
+- `tests/test_bank_integrity.py`: validación básica del banco.
+
+## Integración mínima en app.py
+
+1. Copia la carpeta `data/` al repositorio de la app.
+2. Copia `app_modules/` al repositorio.
+3. En `app.py`, cambia la carga del banco para apuntar a:
+
+```python
+BANK_PATH = "data/tes_banco_master_2400_plus.csv"
+```
+
+4. Importa el cargador:
+
+```python
+from app_modules.import_bank import load_question_bank
+questions = load_question_bank(BANK_PATH)
+```
+
+5. Para repaso adaptativo:
+
+```python
+from app_modules.review_scheduler import select_next_questions, update_review_state
+```
+
+## Nota de seguridad del proyecto
+
+No reemplaza ni modifica `TES_LEIXA_APP_v809_TABLAS_PERSONALIZADAS.zip`. Es un paquete externo para revisar, copiar y adaptar.
+
+Generado: 2026-05-15T12:03:18
