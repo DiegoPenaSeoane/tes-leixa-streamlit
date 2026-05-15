@@ -1,0 +1,138 @@
+
+from __future__ import annotations
+
+from pathlib import Path
+import gzip
+import re
+import unicodedata
+import pandas as pd
+
+ROOT = Path(__file__).resolve().parents[2]
+ADDON_PATH = ROOT / "TES_V810_SAFE_ADDON" / "addons" / "tes_addon_anatomia_logistica_5200.csv"
+
+# Ficheros que NO deben usarse como banco original principal aunque estén en raíz.
+EXCLUDE_PATTERNS = [
+    "addon", "plus", "5200", "2400", "fusionado", "validar", "control", "cobertura",
+    "material", "devolucion", "jsonl", "plantilla"
+]
+
+# Preferimos los bancos reales del proyecto antes que cualquier CSV nuevo suelto.
+PREFERRED_ORIGINALS = [
+    "TES_LEIXA_BANCO_v806_CORRECCIONES_COHERENTES.csv",
+    "TES_LEIXA_BANCO_COMPLETO_ASESOR_v805_AMPLIADO.csv",
+    "tes_leixa_banco_v653_streamlit_ready.csv.gz",
+]
+
+CANONICAL_COLUMNS = [
+    "id", "materia", "modulo", "bloque", "unidad_tema", "concepto_clave", "dificultad", "tipo",
+    "pregunta", "opcion_A", "opcion_B", "opcion_C", "opcion_D", "respuesta_correcta", "respuesta_texto",
+    "explicacion_corta", "explicacion_extendida", "explicacion_si_fallas", "error_tipico",
+    "regla_mnemotecnica", "objetivo_aprendizaje", "repaso_prioridad", "intervalo_inicial_horas",
+    "intervalo_si_falla_horas", "intervalo_si_acierta_dias", "fuente_pdf", "pagina_fuente_visible",
+    "tags_app", "estado_revision", "origen_banco"
+]
+
+COLUMN_ALIASES = {
+    "opcion_a": "opcion_A", "opcion b": "opcion_B", "opcion_b": "opcion_B", "opcion c": "opcion_C", "opcion_c": "opcion_C", "opcion d": "opcion_D", "opcion_d": "opcion_D",
+    "a": "opcion_A", "b": "opcion_B", "c": "opcion_C", "d": "opcion_D",
+    "correcta": "respuesta_correcta", "respuesta": "respuesta_correcta", "answer": "respuesta_correcta",
+    "explicacion": "explicacion_corta", "explicación": "explicacion_corta",
+    "modulo": "modulo", "módulo": "modulo", "asignatura": "materia", "tema": "unidad_tema",
+}
+
+def _read_csv_any(path: Path) -> pd.DataFrame:
+    suffixes = ''.join(path.suffixes).lower()
+    kwargs = dict(dtype=str, keep_default_na=False)
+    if suffixes.endswith('.gz'):
+        with gzip.open(path, 'rt', encoding='utf-8-sig', newline='') as f:
+            return pd.read_csv(f, **kwargs)
+    for enc in ('utf-8-sig', 'utf-8', 'latin-1'):
+        try:
+            return pd.read_csv(path, encoding=enc, **kwargs)
+        except Exception:
+            continue
+    return pd.read_csv(path, **kwargs)
+
+def _norm_key(s: str) -> str:
+    s = str(s).strip()
+    s = ''.join(c for c in unicodedata.normalize('NFD', s) if unicodedata.category(c) != 'Mn')
+    return re.sub(r'\s+', ' ', s.replace('-', '_')).lower()
+
+def normalize_columns(df: pd.DataFrame) -> pd.DataFrame:
+    rename = {}
+    for col in df.columns:
+        key = _norm_key(col)
+        if key in COLUMN_ALIASES:
+            rename[col] = COLUMN_ALIASES[key]
+        elif col in CANONICAL_COLUMNS:
+            rename[col] = col
+    df = df.rename(columns=rename).copy()
+    for col in CANONICAL_COLUMNS:
+        if col not in df.columns:
+            df[col] = ""
+    # Completar modulo si la app filtra por modulo.
+    if "modulo" in df.columns:
+        df["modulo"] = df["modulo"].where(df["modulo"].astype(str).str.len() > 0, df.get("materia", ""))
+    # Normalizar respuesta correcta a A/B/C/D si viene con texto.
+    if "respuesta_correcta" in df.columns:
+        df["respuesta_correcta"] = df["respuesta_correcta"].astype(str).str.strip().str.upper().str[:1]
+    return df
+
+def find_original_bank(root: Path = ROOT) -> Path:
+    for name in PREFERRED_ORIGINALS:
+        p = root / name
+        if p.exists():
+            return p
+    candidates = []
+    for p in list(root.glob("*.csv")) + list(root.glob("*.csv.gz")):
+        lname = p.name.lower()
+        if any(x in lname for x in EXCLUDE_PATTERNS):
+            continue
+        try:
+            n = len(_read_csv_any(p))
+        except Exception:
+            n = -1
+        candidates.append((n, p))
+    if not candidates:
+        raise FileNotFoundError("No encuentro banco original en raíz. Sube el CSV original v809/v806/v805 o dime su nombre exacto.")
+    candidates.sort(reverse=True, key=lambda x: x[0])
+    return candidates[0][1]
+
+def build_merged_bank(original_path: Path | None = None, addon_path: Path = ADDON_PATH) -> pd.DataFrame:
+    original_path = original_path or find_original_bank(ROOT)
+    original = normalize_columns(_read_csv_any(original_path))
+    addon = normalize_columns(_read_csv_any(addon_path))
+
+    original["origen_banco"] = original["origen_banco"].where(original["origen_banco"].astype(str).str.len() > 0, f"ORIGINAL::{original_path.name}")
+    addon["origen_banco"] = addon["origen_banco"].where(addon["origen_banco"].astype(str).str.len() > 0, "ADDON_V810_ANATOMIA_LOGISTICA_5200")
+
+    # Unión de columnas, preservando todas las columnas originales de la app.
+    all_cols = list(dict.fromkeys(list(original.columns) + list(addon.columns) + CANONICAL_COLUMNS))
+    original = original.reindex(columns=all_cols, fill_value="")
+    addon = addon.reindex(columns=all_cols, fill_value="")
+    merged = pd.concat([original, addon], ignore_index=True)
+
+    # Deduplicación conservadora: primero gana el original.
+    # 1) id exacto, si existe; 2) enunciado+opciones+correcta.
+    merged["_id_dedupe"] = merged["id"].astype(str).str.strip()
+    with_id = merged[merged["_id_dedupe"] != ""].drop_duplicates("_id_dedupe", keep="first")
+    no_id = merged[merged["_id_dedupe"] == ""]
+    merged = pd.concat([with_id, no_id], ignore_index=True)
+    key_cols = ["pregunta", "opcion_A", "opcion_B", "opcion_C", "opcion_D", "respuesta_correcta"]
+    merged["_content_key"] = merged[key_cols].fillna("").astype(str).agg("||".join, axis=1).map(_norm_key)
+    merged = merged.drop_duplicates("_content_key", keep="first")
+    merged = merged.drop(columns=["_id_dedupe", "_content_key"], errors="ignore")
+    return merged
+
+def load_bank_v810_safe() -> pd.DataFrame:
+    """Función para app.py: devuelve banco original + addon sin perder Planes."""
+    return build_merged_bank()
+
+if __name__ == "__main__":
+    p = find_original_bank(ROOT)
+    df = build_merged_bank(p)
+    out = ROOT / "TES_LEIXA_BANCO_V810_FUSIONADO_SEGURO.csv"
+    df.to_csv(out, index=False, encoding="utf-8-sig")
+    print(f"Banco original detectado: {p.name}")
+    print(f"Preguntas fusionadas: {len(df)}")
+    print(f"Archivo creado: {out.name}")
