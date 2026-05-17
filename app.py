@@ -1,4 +1,4 @@
-import base64, gzip, hashlib, io, json, random
+import base64, gzip, hashlib, io, json, random, re
 from datetime import datetime, timezone
 from pathlib import Path
 import pandas as pd
@@ -6,7 +6,7 @@ import streamlit as st
 
 st.set_page_config(page_title="TES Leixa — Test táctil", page_icon="🚑", layout="wide")
 
-VERSION = "Banco v8.21 · 10713 preguntas · FIX FileNotFound · siglas + confusiones"
+VERSION = "Banco v8.22 · 10713 preguntas · FIX FileNotFound · siglas + confusiones"
 USER_STORE_PATH = Path("user_store.json")
 
 INITIAL_PASSWORDS = {
