@@ -1,0 +1,18 @@
+# Informe de revisión de los 4 supuestos prácticos
+
+## Veredicto general
+
+Los supuestos son aprovechables y están bastante bien orientados para TES, especialmente para norias de evacuación, sectorización, triaje, comunicaciones y gestión de ambulancias. Hay, no obstante, varias respuestas que conviene matizar para estudiar a nivel examen y no fijar errores de siglas o mando.
+
+## Correcciones y matices principales
+
+1. **PMA no debe usarse sin aclarar**: en los documentos aparece como Puesto Médico Avanzado y también como Puesto de Mando Avanzado. Para evitar confusión en la app se han separado como **PMA sanitario** y **Puesto de Mando Avanzado**.
+2. **El responsable último del lugar no siempre es “generalmente el médico”**. El mando sanitario coordina lo sanitario; la coordinación global depende del mando/dirección operativa del dispositivo.
+3. **Evacuación masiva o salvaje**: se mantiene como recurso excepcional ante peligro inminente, pero no debe enseñarse como circuito ordinario.
+4. **Norias**: se refuerzan las diferencias entre noria cero, camilleo, primera, segunda, tercera y cuarta noria para que no se confundan por proximidad.
+5. **PCAMB/PME/PMA**: se han creado distractores entre ellos porque son términos cercanos y muy examinables.
+6. **Comunicaciones**: se han rehecho preguntas para evitar que el alumno acierte por lógica. Ahora se contraponen plan de transmisiones, centro de comunicación, plataforma tecnológica, indicativo, PTT, código ICAO, código Q, semidúplex, dúplex, repetidor, modulador, oscilador y transductor.
+
+## Uso en el banco
+
+La actualización v819 no copia literalmente las preguntas de los supuestos; las transforma en preguntas nuevas de aplicación con distractores de la misma familia.
